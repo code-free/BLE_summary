@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入要发送的数据" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vn0-7u-hHU">
+                                <rect key="frame" x="68" y="211" width="239" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="239" id="7r1-ZN-4wF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7A-Aq-Taw">
+                                <rect key="frame" x="270" y="262" width="60" height="30"/>
+                                <state key="normal" title="发送数据"/>
+                                <connections>
+                                    <action selector="onClickSendMessageBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kWD-an-rCu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-An-MuT">
+                                <rect key="frame" x="117" y="144" width="367" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NO5-Ti-bxr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P7A-Aq-Taw" firstAttribute="top" secondItem="vn0-7u-hHU" secondAttribute="bottom" constant="21" id="7ks-3J-4bb"/>
+                            <constraint firstItem="vn0-7u-hHU" firstAttribute="top" secondItem="OpH-An-MuT" secondAttribute="bottom" constant="46" id="EeI-1i-2dU"/>
+                            <constraint firstItem="vn0-7u-hHU" firstAttribute="centerX" secondItem="OpH-An-MuT" secondAttribute="centerX" id="H3G-eS-HeP"/>
+                            <constraint firstItem="P7A-Aq-Taw" firstAttribute="centerX" secondItem="vn0-7u-hHU" secondAttribute="centerX" id="djS-oC-SR5"/>
+                            <constraint firstItem="OpH-An-MuT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="124" id="f4v-hj-8i6"/>
+                            <constraint firstItem="OpH-An-MuT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="97" id="fIX-eL-5Ud"/>
+                            <constraint firstItem="vn0-7u-hHU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mCl-8Y-ysQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLb" destination="OpH-An-MuT" id="y9o-Xg-9NU"/>
+                        <outlet property="sendMessageTF" destination="vn0-7u-hHU" id="FtE-aX-1iW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="305"/>
+        </scene>
+    </scenes>
+</document>
